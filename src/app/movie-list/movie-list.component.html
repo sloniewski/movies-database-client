@@ -1,3 +1,9 @@
-<ul>
-  <li *ngFor="let movie of movies">{{ movie.title }} {{movie.year }}</li>
-</ul>
+
+<div style="margin-top:4rem;">
+  <ul class="list-group">
+    <li *ngFor="let movie of movies" class="list-group-item d-flex justify-content-between align-items-center">
+      {{ movie.title }} ({{movie.year }})
+      <span class="badge badge-primary badge-pill">{{ movie.rating }}</span>
+    </li>
+  </ul>
+</div>
